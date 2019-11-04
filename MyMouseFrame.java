@@ -19,8 +19,6 @@ public class MyMouseFrame extends JFrame
         
         mp = new JPanel();
         mp.setBackground(Color.CYAN);
-        mp.setFocusable(true);
-        mp.requestFocus();
         this.add(mp);
         
         ml = new JLabel("No Mouse Event");

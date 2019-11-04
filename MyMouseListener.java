@@ -7,30 +7,48 @@ import java.awt.*;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class MyMouseListener extends MouseAdapter
+public class MyMouseListener extends MouseMotionAdapter implements MouseListener
 {
     JLabel ml = new JLabel("NoMouseEvent");
- 
+    JPanel mp = new JPanel();
+
     //Point mousePosition = MouseInfo.getPointerInfo().getLocation();
     public void mousePressed(MouseEvent e){
         MyMouseFrame mmf = (MyMouseFrame)e.getSource();
+
         int x = e.getX();
         int y = e.getY();
         mmf.ml.setText("MousePressed" + "(" + x + ", " + y + ")");
     }
-    
+
+    public void mouseClicked(MouseEvent e){
+
+    }
+
     public void mouseReleased(MouseEvent e){
         MyMouseFrame mmf = (MyMouseFrame)e.getSource();
         int x = e.getX();
         int y = e.getY();
         mmf.ml.setText("MouseReleased" + "(" + x + ", " + y + ")");
     }
+
+    public void mouseEntered(MouseEvent e){
+        MyMouseFrame mmf = (MyMouseFrame)e.getSource();
+        mmf.mp.setBackground(Color.CYAN);
+    }
+
+    public void mouseExited(MouseEvent e){
+        MyMouseFrame mmf = (MyMouseFrame)e.getSource();
+        mmf.mp.setBackground(Color.YELLOW);
+    }
+
     public void mouseMoved(MouseEvent e){
         MyMouseFrame mmf = (MyMouseFrame)e.getSource();
         int x = e.getX();
         int y = e.getY();
         mmf.ml.setText("MouseMoved" + "(" + x + ", " + y + ")");
     }
+
     public void mouseDragged(MouseEvent e){
         MyMouseFrame mmf = (MyMouseFrame)e.getSource();
         int x = e.getX();
