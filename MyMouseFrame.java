@@ -18,12 +18,12 @@ public class MyMouseFrame extends JFrame
         this.setSize(300,400);
         
         mp = new JPanel();
-        mp.setBackground(Color.BLUE);
-        add(mp);
+        mp.setBackground(Color.CYAN);
+        this.add(mp);
         
         ml = new JLabel("NoMouseEvent");
-        add(ml);
+        mp.add(ml);
 
-        setVisible(true);
+        this.setVisible(true);
     }
 }
