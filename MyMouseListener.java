@@ -1,33 +1,35 @@
-
+import java.awt.event.*;
+import javax.swing.*;
+import java.awt.*;
 /**
  * Write a description of class MyMouseListener here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class MyMouseListener
+public class MyMouseListener extends MouseAdapter
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class MyMouseListener
-     */
-    public MyMouseListener()
-    {
-        // initialise instance variables
-        x = 0;
+    JLabel ml;
+    //Point mousePosition = MouseInfo.getPointerInfo().getLocation();
+    public void mousePressed(MouseEvent e){
+        int x = e.getX();
+        int y = e.getY();
+        ml.setText("MousePressed" + "(" + x + ", " + y + ")");
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public void mouseReleased(MouseEvent e){
+        int x = e.getX();
+        int y = e.getY();
+        ml.setText("MouseReleased" + "(" + x + ", " + y + ")");
+    }
+    public void mouseMoved(MouseEvent e){
+        int x = e.getX();
+        int y = e.getY();
+        ml.setText("MouseMoved" + "(" + x + ", " + y + ")");
+    }
+    public void mouseDragged(MouseEvent e){
+        int x = e.getX();
+        int y = e.getY();
+        ml.setText("MouseDragged" + "(" + x + ", " + y + ")");
     }
 }
