@@ -7,7 +7,7 @@ import java.awt.*;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class MyMouseListener extends MouseAdapter
+public class MyMouseListener extends MouseMotionAdapter implements MouseListener
 {
     JLabel ml = new JLabel("NoMouseEvent");
  
