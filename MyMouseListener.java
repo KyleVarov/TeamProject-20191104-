@@ -9,10 +9,7 @@ import java.awt.*;
  */
 public class MyMouseListener extends MouseMotionAdapter implements MouseListener
 {
-    JLabel ml = new JLabel("NoMouseEvent");
-    JPanel mp = new JPanel();
 
-    //Point mousePosition = MouseInfo.getPointerInfo().getLocation();
     public void mousePressed(MouseEvent e){
         MyMouseFrame mmf = (MyMouseFrame)e.getSource();
 
