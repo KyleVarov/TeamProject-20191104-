@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
 /**
  * Write a description of class MyMouseFrame here.
@@ -5,29 +8,22 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class MyMouseFrame
+public class MyMouseFrame extends JFrame
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    public JPanel mp;
+    public JLabel ml;
+    public MyMouseFrame(){
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setTitle("MouseListener & MouseMotionListener");
+        this.setSize(300,400);
+        
+        mp = new JPanel();
+        mp.setBackground(Color.BLUE);
+        add(mp);
+        
+        ml = new JLabel("NoMouseEvent");
+        add(ml);
 
-    /**
-     * Constructor for objects of class MyMouseFrame
-     */
-    public MyMouseFrame()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        setVisible(true);
     }
 }
