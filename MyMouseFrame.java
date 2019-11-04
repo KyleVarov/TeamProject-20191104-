@@ -24,6 +24,6 @@ public class MyMouseFrame extends JFrame
         ml = new JLabel("NoMouseEvent");
         mp.add(ml);
 
-        setVisible(true);
+        this.setVisible(true);
     }
 }
