@@ -20,18 +20,21 @@ public class MyMouseListener extends MouseAdapter
     }
     
     public void mouseReleased(MouseEvent e){
+        MyMouseFrame mmf = (MyMouseFrame)e.getSource();
         int x = e.getX();
         int y = e.getY();
-        ml.setText("MouseReleased" + "(" + x + ", " + y + ")");
+        mmf.ml.setText("MouseReleased" + "(" + x + ", " + y + ")");
     }
     public void mouseMoved(MouseEvent e){
+        MyMouseFrame mmf = (MyMouseFrame)e.getSource();
         int x = e.getX();
         int y = e.getY();
-        ml.setText("MouseMoved" + "(" + x + ", " + y + ")");
+        mmf.ml.setText("MouseMoved" + "(" + x + ", " + y + ")");
     }
     public void mouseDragged(MouseEvent e){
+        MyMouseFrame mmf = (MyMouseFrame)e.getSource();
         int x = e.getX();
         int y = e.getY();
-        ml.setText("MouseDragged" + "(" + x + ", " + y + ")");
+        mmf.ml.setText("MouseDragged" + "(" + x + ", " + y + ")");
     }
 }
