@@ -13,9 +13,10 @@ public class MyMouseListener extends MouseAdapter
  
     //Point mousePosition = MouseInfo.getPointerInfo().getLocation();
     public void mousePressed(MouseEvent e){
+        MyMouseFrame mmf = (MyMouseFrame)e.getSource();
         int x = e.getX();
         int y = e.getY();
-        ml.setText("MousePressed" + "(" + x + ", " + y + ")");
+        mmf.ml.setText("MousePressed" + "(" + x + ", " + y + ")");
     }
     
     public void mouseReleased(MouseEvent e){
