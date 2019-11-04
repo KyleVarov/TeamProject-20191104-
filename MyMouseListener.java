@@ -12,6 +12,7 @@ public class MyMouseListener extends MouseAdapter
     JLabel ml = new JLabel("NoMouseEvent");
  
     //Point mousePosition = MouseInfo.getPointerInfo().getLocation();
+    
     public void mousePressed(MouseEvent e){
         int x = e.getX();
         int y = e.getY();
